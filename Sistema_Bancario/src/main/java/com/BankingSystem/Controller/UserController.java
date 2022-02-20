@@ -72,9 +72,8 @@ public class UserController {
 	
 //Send Money By ID Method.
 	@RequestMapping(path = "/send",method = RequestMethod.POST)
-	public String send(@RequestParam("senderActNo")String senderActNo,
-	@RequestParam("recipientActNo") String recipientActNo,
-	@RequestParam("amount") double amount ,Model model, RedirectAttributes redirectAttributes) {    
+	public String send(@RequestParam("senderActNo")String senderActNo,@RequestParam("recipientActNo") String recipientActNo,@RequestParam("amount") double amount ,Model model, RedirectAttributes redirectAttributes) {
+    
     double amt = amount;
     Optional<User> userSender = userRepo.findByaccountNumber(senderActNo);
     Optional<User> userReceiver = userRepo.findByaccountNumber(recipientActNo);
