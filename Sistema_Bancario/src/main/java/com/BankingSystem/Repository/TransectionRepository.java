@@ -1,8 +1,8 @@
 package com.BankingSystem.Repository;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import com.BankingSystem.Models.Transaction;
 
-import com.BankingSystem.Entities.Transaction;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface TransectionRepository extends JpaRepository<Transaction, Integer> {
 

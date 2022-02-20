@@ -3,8 +3,8 @@
 html,
 body {
 
-	background: rgb(238,174,202);
-	background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(48,113,190,1) 100%); 
+	background: rgb(182, 157, 168);
+	background: radial-gradient(circle, rgb(182, 157, 168) 0%, rgb(6, 7, 8) 100%); 
     font-family: 'Roboto', sans-serif;
   
 }

@@ -1,9 +1,7 @@
-package com.BankingSystem.Entities;
+package com.BankingSystem.Models;
 
 import java.math.BigInteger;
 import javax.persistence.*;
-
-
 
 @Entity
 @Table(name="Customer")
@@ -86,12 +84,4 @@ public class User {
 		this.Balance = balance;
 	}
 
-	
-	
-	
-	
-	
-
-	
-	
 }

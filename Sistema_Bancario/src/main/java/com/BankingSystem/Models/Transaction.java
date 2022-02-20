@@ -1,26 +1,27 @@
-package com.BankingSystem.Entities;
+package com.BankingSystem.Models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name = "Transfers")
+@Table(name = "transaccion")
 public class Transaction {
 	   @Id
 	   @GeneratedValue(strategy = GenerationType.AUTO)
        private int id;
-       private double amount;
-       private String sendBy;
-       private String sendTo;
-       @Temporal(TemporalType.TIMESTAMP)
-       private Date sendOn;
-       private String status;
+	   private int banco_nombre;//PARA HACER LA RELACION CON BANCO Y SACAR EL NOMBRE DEL BANCO
+	   private String cargo;// Y EL RIPO DE CARGO
+
+       private double amount;//MONTO DE LA TRANSSACCION
+
+       private String sendBy;//cuenta_remitente
+
+       private String sendTo;//cuenta_destinatario
+
+       @Temporal(TemporalType.TIMESTAMP)//OBTENER FECHA DE LA TRANSACCION
+       private Date sendOn;//fecha
+
+       private String status;//estado
      //Getters and Setters  
        
 	public int getId() {
@@ -59,12 +60,18 @@ public class Transaction {
 	public void setStatus(String status) {
 		this.status = status;
 	}
-       
-       
-
-       
-    
-
+	public int getBanco_nombre() {
+		return banco_nombre;
+	}
+	public void setBanco_nombre(int banco_nombre) {
+		this.banco_nombre = banco_nombre;
+	}
+	public String getCargo() {
+		return cargo;
+	}
+	public void setCargo(String cargo) {
+		this.cargo = cargo;
+	}
        
        
 }
