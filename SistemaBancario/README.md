@@ -1,0 +1,1 @@
+HACER PRIMERO LA BD "banco"
