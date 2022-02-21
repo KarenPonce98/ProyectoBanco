@@ -7,7 +7,8 @@ import javax.persistence.*;
 
 public class Compañia extends Titular{
     
-
+    @Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     String nombre;
     public Long getId() {

@@ -15,7 +15,7 @@ public class User {
 	private BigInteger phone;
 	@Column(unique = true)
 	private String accountNumber;
-	private double Balance;
+	//private double Balance;
 	
 	
 	
@@ -66,22 +66,22 @@ public class User {
 		this.accountNumber = accountNumber;
 	}
 
-	public double getBalance() {
-		return Balance;
-	}
+	//public double getBalance() {
+	//	return Balance;
+	//}
 
-	public User(int id, String userName, String email, BigInteger phone, String accountNumber, double balance) {
+	public User(int id, String userName, String email, BigInteger phone, String accountNumber) {
 		super();
 		Id = id;
 		this.userName = userName;
 		this.email = email;
 		this.phone = phone;
 		this.accountNumber = accountNumber;
-		Balance = balance;
+		//Balance = balance;
 	}
 
-	public void setBalance(double balance) {
+	/*public void setBalance(double balance) {
 		this.Balance = balance;
-	}
+	}*/
 
 }

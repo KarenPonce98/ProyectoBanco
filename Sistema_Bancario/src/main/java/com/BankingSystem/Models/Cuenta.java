@@ -1,23 +1,29 @@
 package com.BankingSystem.Models;
- import javax.persistence.*;
+ import java.io.Serializable;
+
+import javax.persistence.*;
 
 @Entity
 @Table(name="cuenta")
-public class Cuenta {
+public class Cuenta implements Serializable {
+    private static final long serialVersionUID=1L;
     
     @Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-    Long id;
-    int titular;
-    int pin;
-    int balance;
-    int no_cuenta;
-    int transaccion;
-    public Long getId() {
-        return id;
+    private Long id_cuenta;
+    private int titular;//TRAER NOMBRE DE TITULAR
+    private int pin;
+    private double balance;//
+    //private int no_cuenta; PARA EL NOCUENTA SOLO SE GUARDARA EL ID DEL TITULAR Y EN EL HTML SE MOSTRARA
+   // private int banco;
+
+    @ManyToOne
+    private Banco banco;
+    public Long getId_cuenta() {
+        return id_cuenta;
     }
-    public void setId(Long id) {
-        this.id = id;
+    public void setId_cuenta(Long id_cuenta) {
+        this.id_cuenta = id_cuenta;
     }
     public int getTitular() {
         return titular;
@@ -31,22 +37,26 @@ public class Cuenta {
     public void setPin(int pin) {
         this.pin = pin;
     }
-    public int getBanco() {
+    public double getBalance() {
         return balance;
     }
+    public void setBalance(double balance) {
+        this.balance = balance;
+    }
+    /*public int getBanco() {
+        return banco;
+    }
     public void setBanco(int banco) {
-        this.balance = banco;
+        this.banco = banco;
+    }*/
+    public Cuenta() {
     }
-    public int getNo_cuenta() {
-        return no_cuenta;
+    public Cuenta(Long id_cuenta, int titular, int pin, double balance) {
+        super();
+        this.id_cuenta = id_cuenta;
+        this.titular = titular;
+        this.pin = pin;
+        this.balance = balance;
     }
-    public void setNo_cuenta(int no_cuenta) {
-        this.no_cuenta = no_cuenta;
-    }
-    public int getTransaccion() {
-        return transaccion;
-    }
-    public void setTransaccion(int transaccion) {
-        this.transaccion = transaccion;
-    }
+
 }
