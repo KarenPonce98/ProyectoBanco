@@ -10,7 +10,7 @@ public class Transaction {
 	   @GeneratedValue(strategy = GenerationType.AUTO)
        private int id;
 	   private int banco_nombre;//PARA HACER LA RELACION CON BANCO Y SACAR EL NOMBRE DEL BANCO
-	   private String cargo;// Y EL RIPO DE CARGO
+	   private String cargo;// Y EL RIPO DE CARGO..
 
        private double amount;//MONTO DE LA TRANSSACCION
 
