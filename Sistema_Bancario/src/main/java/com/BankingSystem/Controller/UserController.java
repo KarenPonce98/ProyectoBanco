@@ -22,8 +22,8 @@ public class UserController {
 	UserRepository userRepo;
 	@Autowired
 	TransectionRepository transactionRepo;
-	
-	@GetMapping("/home")
+
+	@GetMapping("/")
 	public String Home() {
 		return "Index";
 	}

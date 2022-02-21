@@ -9,6 +9,8 @@ public class SparkBankingSystemApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SparkBankingSystemApplication.class, args);
 		
+
+		
 	}
 
 }
