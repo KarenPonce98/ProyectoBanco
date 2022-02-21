@@ -1,4 +1,4 @@
-package com.BankingSystem.Models;
+/*package com.BankingSystem.Models;
 
 import javax.persistence.*;
 
@@ -7,7 +7,8 @@ import javax.persistence.*;
 
 public class Compañia extends Titular{
     
-
+    @Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     String nombre;
     public Long getId() {
@@ -23,3 +24,4 @@ public class Compañia extends Titular{
         this.nombre = nombre;
     }
 }
+*/

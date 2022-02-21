@@ -7,12 +7,12 @@ public class Cuenta {
     
     @Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-    Long id;
-    int titular;
-    int pin;
-    int balance;
-    int no_cuenta;
-    int transaccion;
+    private Long id;
+    private int titular;
+    private int pin;
+    private int balance;
+    private int no_cuenta;
+    private int transaccion;
     public Long getId() {
         return id;
     }
