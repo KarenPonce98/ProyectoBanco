@@ -24,7 +24,7 @@ public class UserController {
 	TransectionRepository transactionRepo;
 
 	@GetMapping("/")
-	public String Home() {
+	public String Index() {
 		return "Index";
 	}
 	

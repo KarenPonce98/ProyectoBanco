@@ -10,14 +10,14 @@ public class Banco {
 	private int id_banco;
     private String tipo_cargo;
     
-    @OneToMany (mappedBy = "banco")
-    private List<Cuenta>cuentas;
+   // @OneToMany (mappedBy = "banco")
+    //private List<Cuenta>cuentas;
     //@JoinTable(name = "banco_cuenta",
       //      joinColumns=@JoinColumn(name="id_banco"),
         //    inverseJoinColumns=@JoinColumn(name="id_cuenta"))
     
 
-    //private int cuenta;//SE TRAE DE CUENTA 
+    private int cuenta;//SE TRAE DE CUENTA 
     //private double balance;
 
     public int getId() {

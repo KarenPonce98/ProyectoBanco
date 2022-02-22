@@ -70,14 +70,14 @@ public class User {
 		return Balance;
 	}
 
-	public User(int id, String userName, String email, BigInteger phone, String accountNumber) {
+	public User(int id, String userName, String email, BigInteger phone, String accountNumber,double balance) {
 		super();
 		Id = id;
 		this.userName = userName;
 		this.email = email;
 		this.phone = phone;
 		this.accountNumber = accountNumber;
-		//Balance = balance;
+		Balance = balance;
 	}
 
 	public void setBalance(double balance) {
