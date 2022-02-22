@@ -29,7 +29,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         .antMatchers("/SBS/customer/transferMoney/{id}").hasAnyRole("ADMIN")
         .anyRequest().authenticated()
         .and()
-        .formLogin().permitAll()
+        .formLogin().loginPage("/login")
+        .permitAll()
         .and()
         .logout().permitAll();
         

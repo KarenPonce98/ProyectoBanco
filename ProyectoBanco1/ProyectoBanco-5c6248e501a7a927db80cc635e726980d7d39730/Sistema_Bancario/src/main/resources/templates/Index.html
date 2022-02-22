@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymleaf.org">
+<html lang="en" xmlns:th="http://www.thymleaf.org"
+html xmlns="http://www.thymeleaf.org/extras/spring-security">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
@@ -46,8 +47,13 @@
         <a th:href="@{/SBS/transactions}" class="nav-item nav-link">View Transections</a>
       </li>
     </ul>
-
+    <ul class="navbar-nav ml-auto">
+        <a class="btn btn-outline-success" th:href="@{'/login'}">Iniciar Sesión</a>
         <a class="btn btn-warning" th:href="@{'/crearcuenta'}">Crear Cuenta</a>
+
+    </ul>
+
+        
 </div>
   <!-- Collapsible content -->
 
