@@ -22,9 +22,9 @@ public class UserController {
 	UserRepository userRepo;
 	@Autowired
 	TransectionRepository transactionRepo;
-
-	@GetMapping("/")
-	public String Index() {
+	
+	@GetMapping("/home")
+	public String Home() {
 		return "Index";
 	}
 	

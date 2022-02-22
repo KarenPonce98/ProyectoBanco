@@ -70,7 +70,7 @@ public class User {
 		return Balance;
 	}
 
-	public User(int id, String userName, String email, BigInteger phone, String accountNumber,double balance) {
+	public User(int id, String userName, String email, BigInteger phone, String accountNumber, double balance) {
 		super();
 		Id = id;
 		this.userName = userName;

@@ -1,4 +1,4 @@
-package com.BankingSystem.Models;
+/*package com.BankingSystem.Models;
 import javax.persistence.*;
 
 @Entity
@@ -8,3 +8,4 @@ public class Titular {
 	@GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 }
+*/

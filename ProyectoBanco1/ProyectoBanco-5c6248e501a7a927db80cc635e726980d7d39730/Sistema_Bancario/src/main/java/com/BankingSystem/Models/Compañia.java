@@ -1,4 +1,4 @@
-package com.BankingSystem.Models;
+/*package com.BankingSystem.Models;
 
 import javax.persistence.*;
 
@@ -24,3 +24,4 @@ public class Compañia extends Titular{
         this.nombre = nombre;
     }
 }
+*/
