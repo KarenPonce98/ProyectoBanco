@@ -23,7 +23,7 @@ public class UserController {
 	@Autowired
 	TransectionRepository transactionRepo;
 	
-	@GetMapping("/home")
+	@GetMapping({"/home","/index","/"})
 	public String Home() {
 		return "Index";
 	}
