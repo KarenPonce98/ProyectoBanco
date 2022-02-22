@@ -22,12 +22,16 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         //URL PERMITIDAS POR TODOS LOS USUARIOS
         http.authorizeRequests().antMatchers("/index","/home","/","/css/**","/image/**").permitAll()
-        
+
         .antMatchers("SBS/customers").hasAnyRole("USER")
-        .antMatchers("SBS/customers").hasAnyRole("ADMIN")
+        .antMatchers("/crearcuenta").hasAnyRole("ADMIN")
         .antMatchers("SBS/SendMoney").hasAnyRole("ADMIN")
         .antMatchers("/SBS/customer/transferMoney/{id}").hasAnyRole("ADMIN")
-        .anyRequest().authenticated();
+        .anyRequest().authenticated()
+        .and()
+        .formLogin().permitAll()
+        .and()
+        .logout().permitAll();
         
     }
 

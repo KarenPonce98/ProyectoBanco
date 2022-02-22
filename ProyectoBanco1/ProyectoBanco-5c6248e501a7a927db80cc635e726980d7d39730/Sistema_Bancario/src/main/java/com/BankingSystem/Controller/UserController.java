@@ -27,6 +27,11 @@ public class UserController {
 	public String Home() {
 		return "Index";
 	}
+
+	@GetMapping("/crearcuenta")
+	public String crearcuenta() {
+		return "Form";
+	}
 	
 	// Get List of All Coustomers.
 	@RequestMapping(value = "SBS/customers", method = RequestMethod.GET)
