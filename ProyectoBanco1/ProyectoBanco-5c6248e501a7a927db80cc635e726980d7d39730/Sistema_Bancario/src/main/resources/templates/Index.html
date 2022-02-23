@@ -53,7 +53,7 @@
                 <li sec:authorize="!isAuthenticated()">
                     <a class="btn btn-outline-success" th:href="@{'/login'}">Iniciar Sesión</a>
                 </li>
-                
+
                 <li class="dropdown show" sec:authorize="isAuthenticated()">
                     <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -65,7 +65,7 @@
                         <form th:action="@{/logout}" method="post">
                             <button class="dropdown -item" type="submit">Cerrar Sesión</button>
                         </form>
-                        
+
                     </div>
                 </li>
 
@@ -93,10 +93,16 @@
                         <div class="card-body">
 
 
-                            <a th:href="@{/SBS/customers}" class="btn  btn-light btn-outline-primary">View Customers
+                            <a th:href="@{/SBS/customers}" class="btn  btn-light btn-outline-light">View Customers
                                 &raquo;</a>
+
                         </div>
                     </div>
+
+                    <img th:src="@{/image/persona.png}" height="100px" width="100px">
+                    </br>
+                    <button type="button" class="btn  btn-light btn-outline-light">Persona</button>
+
 
                 </div>
 
@@ -108,10 +114,20 @@
                         <div class="card-body">
 
 
-                            <a th:href="@{/SBS/SendMoney}" class="btn  btn-light btn-outline-primary">Send Money
+
+
+                            <a th:href="@{/SBS/SendMoney}" class="btn  btn-light btn-outline-light">Send Money
                                 &raquo;</a>
+
                         </div>
                     </div>
+
+
+                    <img th:src="@{/image/empresa.png}" height="100px" width="100px">
+                    </br>
+
+                    <button type="button" class="btn  btn-light btn-outline-light">Compañia</button>
+
 
                 </div>
 
@@ -123,10 +139,16 @@
                         <div class="card-body">
 
 
-                            <a th:href="@{/SBS/transactions}" class="btn  btn-light btn-outline-primary">View
+                            <a th:href="@{/SBS/transactions}" class="btn  btn-light btn-outline-light">View
                                 Transections &raquo;</a>
+
                         </div>
                     </div>
+
+
+                    <img th:src="@{/image/titular.png}" height="100px" width="100px">
+                    </br>
+                    <button type="button" class="btn  btn-light btn-outline-light">Titular</button>
 
                 </div>
 

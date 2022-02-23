@@ -18,7 +18,7 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark purple-gradient fixed-top"><ul class="navbar-nav ml-auto">
-        <a class="btn btn-outline-danger" th:href="@{'/home'}">Cancelar</a>
+        
         
 
     </ul></nav>
@@ -35,6 +35,7 @@
 				<label for="password" class="sr-only">Contraseña</label>
 				<input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
 				<button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
+                <a class="btn btn-lg btn-danger btn-block " th:href="@{'/home'}">Cancelar</a>
 			</form>
 
 		</div> 
