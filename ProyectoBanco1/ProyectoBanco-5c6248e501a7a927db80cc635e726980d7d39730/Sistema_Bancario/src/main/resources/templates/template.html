@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymleaf.org">
+<head>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+<link th:href="@{/css/style.css}" rel="stylesheet"></link>
+<meta charset="ISO-8859-1">
+<title>Titular</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+</head>
+<body>
+<!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark purple-gradient fixed-top">
+
+    <a href="/" class="navbar-brand"> 𝐁𝐚𝐧𝐤 Kalu</a>
+           
+            
+        
+
+  <!-- Collapse button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+    aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Collapsible content -->
+  <div class="collapse navbar-collapse" id="basicExampleNav">
+    <!-- Links -->
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a th:href="@{/SBS/customers}" class="nav-item nav-link ">View Customers</a>
+      </li>
+      <li class="nav-item active">
+         <a th:href="@{/SBS/SendMoney}" class="nav-item nav-link">Send Money</a>
+      </li>
+      <li class="nav-item">
+        <a th:href="@{/SBS/transactions}" class="nav-item nav-link">View Transections</a>
+      </li>
+      
+     
+
+    </ul>
+</div>
+  <!-- Collapsible content -->
+
+</nav>
+<!--/.Navbar-->
+	<div class="container p-5 my-5">
+		<div class="row justify-content-center">
+			<div class="col-3 text-center">
+				<h1 class="text-light">TITULARES</h1>
+			</div>
+		</div>
+		<div th:if="${message}"
+				th:class=" ${'alert-dismissible alert  ' + alertClass}">
+				<span th:text="${message}"></span>
+				<button type="button" class="close" data-dismiss="alert"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+
+		<div class="d-flex justify-content-center">
+
+
+			
+<!--DESDE AQUI------------------------------------------------------------------------------------------------------------------->
+
+<div class="container mt-4">
+	<a th:href="@{/newtitular}" class="btn btn-primary">Agreagr Nuevo</a>
+		<table  class="table" border="1">
+			<thead style="background-color: #5BA5EA">
+				<tr>
+                    <th>ID</th>
+					<th>PIN</th>
+					<th>NUMERO CUENTA</th>					
+					<th>USERNAME</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="p:${personas}">
+					<td th:text="${p.id}"></td>
+					<td th:text="${p.pin}"></td>
+					<td th:text="${p.no_cuenta}"></td>
+                    <td th:text="${p.username}"></td>
+					<td>
+					<a th:onclick="eliminar([[${p.id}]])" href="#" class="btn btn-danger">eliminar</a>
+					<a th:href="@{/editartitular/}+${p.id}" class="btn btn-warning">editar</a>
+					</td>
+				</tr>
+				
+			</tbody>
+		</table>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+	<script	src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<script src="/funcioneshuevos.js"></script>
+<!--HASTA AQUI----------------------------------------------------------------------------------------------------------->
+
+		</div>
+	</div>
+
+	<br>
+	<footer>
+		<hr class="text-light">
+		<div class="row">
+			<div class="col-md-6">
+				<p class="text-light">Created by</p>
+			</div>
+			<div class="col-md-6 text-md-end ">
+				<a class="text-light">Andrea Ponce</a> <span
+					class="text-muted mx-2">|</span> <a class="text-light">Luis Escobedo</a>
+			</div>
+		</div>
+	</footer>
+
+
+</body>
+
+</html>

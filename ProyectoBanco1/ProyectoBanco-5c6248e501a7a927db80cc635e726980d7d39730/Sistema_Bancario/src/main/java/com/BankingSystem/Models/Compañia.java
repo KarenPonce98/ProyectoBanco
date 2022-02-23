@@ -1,9 +1,9 @@
-/*package com.BankingSystem.Models;
+package com.BankingSystem.Models;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name="compañia")
+@Table(name="compania")
 
 public class Compañia extends Titular{
     
@@ -23,5 +23,14 @@ public class Compañia extends Titular{
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+    public Compañia() {
+       
+    }
+    public Compañia(Long id, int pin, int no_cuenta,String username,char enabled, Long id2, String nombre) {
+        super(id, pin, no_cuenta,username,enabled);
+        id = id2;
+        this.nombre = nombre;
+    }
+
+    
 }
-*/
