@@ -6,19 +6,22 @@ import javax.persistence.*;
 public class Banco {
     @Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int Id;
+	private int id;
 
-    private int cuenta;
+    private String cuenta;
+    private double balance;
+    private String tipo_cargo;
+
     public int getId() {
-        return Id;
+        return id;
     }
     public void setId(int id) {
-        Id = id;
+        id = id;
     }
-    public int getCuenta() {
+    public String getCuenta() {
         return cuenta;
     }
-    public void setCuenta(int cuenta) {
+    public void setCuenta(String cuenta) {
         this.cuenta = cuenta;
     }
     public double getBalance() {
@@ -33,6 +36,5 @@ public class Banco {
     public void setTipo_cargo(String tipo_cargo) {
         this.tipo_cargo = tipo_cargo;
     }
-    private double balance;
-    private String tipo_cargo;
+    
 }
