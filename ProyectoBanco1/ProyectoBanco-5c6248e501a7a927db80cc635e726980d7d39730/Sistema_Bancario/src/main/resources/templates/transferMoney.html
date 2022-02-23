@@ -97,14 +97,14 @@
 							<label for="RecipientAct" class="text-light">Enter
 								recipient account no.</label> <input type="text"
 								th:name="recipientActNo" class="form-control" id="RecipientAct"
-								placeholder="Example SBS0220XX">
+								placeholder="Example 12345">
 						</div>
 						<div class="form-group">
 							<label for="amount" class="text-light">Enter amount</label> <label
 								for="amount" class="text-light">
 							</label>
 							<span class="text-danger">Available
-								balance:&#x20B9;<span th:text="${userById.balance}"></span></span>
+								balance:$<span th:text="${userById.balance}"></span></span>
 							 <input type="number" th:name="amount" class="form-control"
 								id="amount">
 						</div>

@@ -10,16 +10,22 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.BankingSystem.Models.Titular;
 import com.BankingSystem.Models.Transaction;
 import com.BankingSystem.Models.User;
+import com.BankingSystem.Repository.ITitular;
 import com.BankingSystem.Repository.TransectionRepository;
 import com.BankingSystem.Repository.UserRepository;
+import com.BankingSystem.ServiceInterface.ITitularService;
 
 @Controller
 public class UserController {
 
 	@Autowired
 	UserRepository userRepo;
+	ITitular titular;
+	private ITitularService service;
+
 	@Autowired
 	TransectionRepository transactionRepo;
 	
@@ -34,11 +40,9 @@ public class UserController {
 	}
 	
 	// Get List of All Coustomers.
-	@RequestMapping(value = "SBS/customers", method = RequestMethod.GET)
-	public String getUsers(Model model) {
-		List<User> userList = userRepo.findAll();
-
-		model.addAttribute("allUser", userList);
+	@GetMapping(value = "SBS/customers")
+	public String getTitular(Model model) {
+		model.addAttribute("allUser", service.listar());
 		return "Customers";
 	}
 

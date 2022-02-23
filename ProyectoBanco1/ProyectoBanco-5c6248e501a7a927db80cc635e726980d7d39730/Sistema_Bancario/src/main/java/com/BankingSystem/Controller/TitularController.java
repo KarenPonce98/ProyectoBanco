@@ -23,6 +23,13 @@ public class TitularController {
 		model.addAttribute("personas", service.listar());
 		return "titular";
 	}
+
+	@GetMapping("/listartodo")
+	public String listartodo(Model model) {
+		model.addAttribute("personas", service.listar());
+		return "Customers";
+	}
+
 	@GetMapping("/editartitular/{id}")
 	public String listarId(@PathVariable int id,Model model) {
 		model.addAttribute("persona", service.listarId(id));
